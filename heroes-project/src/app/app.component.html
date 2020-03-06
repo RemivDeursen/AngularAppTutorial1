@@ -1,2 +1,16 @@
-<h1>{{title}}</h1>
-<app-heroes></app-heroes>
+<div class="app_container">
+  <div class="title_container">
+    <h1>{{title}}
+    </h1>
+    <nav class="nav_container">
+      <a class="nav_button" mat-button routerLink="/dashboard">Dashboard</a>
+      <a class="nav_button" mat-button routerLink="/heroes">Heroes</a>
+    </nav>
+  </div>
+  <div style="display: flex;flex-direction: row;justify-content: space-between;">
+    <router-outlet style="flex:none;display: none;"></router-outlet>
+  </div>
+
+</div>
+
+<app-messages style="display: flex;flex-direction: row;justify-self: right;"></app-messages>

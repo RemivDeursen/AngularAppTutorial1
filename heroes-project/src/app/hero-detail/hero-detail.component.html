@@ -1,0 +1,16 @@
+<div id="div_selectedHero" *ngIf="hero">
+  <h2 style="color: white;">{{ hero.name | uppercase }} Details</h2>
+  <div class="div_selectedherodetails">
+    <span id="span_heroid">id:
+
+    </span>{{hero.id}}
+  </div>
+  <div>
+    <label>name:
+      <mat-form-field>
+        <input matInput [(ngModel)]="hero.name" placeholder="" />
+      </mat-form-field>
+    </label>
+  </div>
+  <button mat-raised-button class="btn_back" (click)="goBack()">Go back</button>
+</div>

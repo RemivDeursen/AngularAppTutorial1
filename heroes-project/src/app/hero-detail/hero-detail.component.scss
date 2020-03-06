@@ -1,0 +1,36 @@
+#div_selectedHero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: white;
+  background-color: #7bacd6;
+  border-radius: 0px 0px 4px 4px;
+  padding: 0.3em 0;
+  margin-bottom: 2em;
+  width: 30em;
+  #span_heroid {
+    display: flexbox;
+  }
+}
+.btn_back{
+  display: flex;
+  text-align: center;
+  width: 80%;
+  height: 2.5em;
+  align-self: center;
+  justify-content: center;
+}
+
+.li_heroselect p {
+  top: -20px;
+}
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+label,
+#span_heroid {
+  padding-left: 20px;
+}

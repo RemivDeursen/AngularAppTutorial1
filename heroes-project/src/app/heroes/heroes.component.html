@@ -1,1 +1,14 @@
-{{hero}}
+<div class="heroes_container" style="display:flex;flex-direction: column; justify-content: space-around;">
+  <h2>My Heroes</h2>
+  <ul class="heroes">
+    <li class="li_heroselect" *ngFor="let hero of heroes">
+      <div>
+        <a style="display: block;width: 14em;text-decoration:none;" routerLink="/detail/{{hero.id}}">
+          <span class="badge">{{hero.id}}</span> {{hero.name}}
+        </a>
+      </div>
+    </li>
+  </ul>
+
+</div>
+
