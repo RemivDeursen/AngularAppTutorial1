@@ -12,23 +12,26 @@ label,
   border-radius: 0px 0px 4px 4px;
   background-color: #7bacd6;
 }
-  h2{
-    color: white;
-  }
+h2 {
+  color: white;
+}
+a {
+  display: contents !important;
+  color: white;
+}
 .heroes {
   margin: 0 0 2em 0;
   list-style-type: none;
   color: white;
   padding: 0;
   width: 15em;
-  a {
-    color: white;
-  }
 
   .li_heroselect {
     cursor: pointer;
     display: flex;
     color: white;
+    flex-direction: row;
+    justify-content: space-between;
     background-color: #1e88e5;
     align-items: center;
     left: 0;
@@ -49,6 +52,14 @@ label,
   .li_heroselect.selected {
     background-color: #145996;
     color: white;
+  }
+  .delete {
+    display: inline-flex;
+    align-self: end;
+    background-color: gray !important;
+    color: white;
+    z-index: 9999;
+    margin-right: 0.5em;
   }
   .badge {
     display: inline-flex;

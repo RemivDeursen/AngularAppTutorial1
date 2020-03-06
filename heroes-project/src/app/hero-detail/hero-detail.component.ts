@@ -1,8 +1,11 @@
+import { Observable } from 'rxjs';
 import { HeroService } from './../hero.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { Hero } from '../hero';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+
 @Component({
   selector: 'app-hero-detail',
   templateUrl: './hero-detail.component.html',
@@ -27,6 +30,11 @@ export class HeroDetailComponent implements OnInit {
 
   goBack(): void{
     this.location.back();
+  }
+
+  save(): void {
+    this.heroService.updateHero(this.hero)
+    .subscribe(() => this.goBack());
   }
 
 }
