@@ -3,19 +3,20 @@
     <h2>My Heroes</h2>
     <ul class="heroes">
       <li class="li_heroselect" *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">
-            <span class="badge">{{hero.id}}</span> {{hero.name}}
-          <button class="delete" title="delete hero" (click)="delete(hero)">x</button>
+        <span class="badge">{{hero.id}}</span> {{hero.name}}
+        <button class="delete" title="delete hero" (click)="delete(hero)">x</button>
       </li>
     </ul>
 
   </div>
 
-  <div style="display: flex">
-    <div>
-      <label>Hero name:
+  <div style="display: flex;border-radius: 4px;background-color: #7bacd6;flex-direction: column;">
+    <h3 style="display: flex;">Hero name:</h3>
+    <div style="display: flex;align-self: baseline;height: fit-content;padding-right: 1em;">
+      <label style="display: flex;">
         <input #heroName />
       </label>
-      <button (click)="add(heroName.value); heroName.value=''">
+      <button mat-raised-button style="display: flex;" (click)="add(heroName.value); heroName.value=''">
         add
       </button>
     </div>

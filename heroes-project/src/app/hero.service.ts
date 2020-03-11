@@ -13,7 +13,7 @@ export class HeroService {
 
   constructor(private messageService: MessageService,
     private http: HttpClient) { }
-  private heroesUrl = 'api/heroes';
+  private heroesUrl = 'https://localhost:5001/api/heroes';
 
   httpOptions = {
     headers: new HttpHeaders({
@@ -83,5 +83,18 @@ export class HeroService {
 
       return of(result as T);
     };
+  }
+  /* GET heroes whose name contains search term */
+  searchHeroes(term: string): Observable<Hero[]> {
+    if (!term.trim()) {
+      // if not search term, return empty hero array.
+      return of([]);
+    }
+    return this.http.get<Hero[]>(`${this.heroesUrl}/?name=${term}`).pipe(
+      tap(x => x.length ?
+        this.log(`found heroes matching "${term}"`) :
+        this.log(`no heroes matching "${term}"`)),
+      catchError(this.handleError<Hero[]>('searchHeroes', []))
+    );
   }
 }

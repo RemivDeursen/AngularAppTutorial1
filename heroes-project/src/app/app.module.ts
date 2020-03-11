@@ -16,6 +16,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
 import { InMemoryDataService } from './in-memory-data.service';
+import { HeroSearchComponent } from './hero-search/hero-search.component';
 
 @NgModule({
   imports: [
@@ -26,7 +27,7 @@ import { InMemoryDataService } from './in-memory-data.service';
     MatInputModule,
     MatButtonModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false })
+    // HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false })
   ],
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import { InMemoryDataService } from './in-memory-data.service';
     HeroDetailComponent,
     MessagesComponent,
     TopBarComponent,
-    DashboardComponent
+    DashboardComponent,
+    HeroSearchComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
