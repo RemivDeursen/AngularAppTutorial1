@@ -1,6 +1,6 @@
 using System;
 
-namespace HeroesAPI
+namespace Heroes.API
 {
     public class WeatherForecast
     {

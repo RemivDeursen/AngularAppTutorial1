@@ -11,9 +11,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
-using HeroesAPI.Models;
+using Heroes.Data.Models;
+using Heroes.Services;
 
-namespace HeroesAPI
+namespace Heroes.API
 {
     public class Startup
     {
@@ -27,7 +28,8 @@ namespace HeroesAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<HeroContext>(opt => opt.UseSqlServer("Server=localhost;Database=HeroDB;User Id=sa;Password=Development1!"));
+            services.AddDbContext<ProjectContext>(opt => opt.UseSqlServer("Server=localhost;Database=HeroDB;User Id=sa;Password=Development1!"));
+            services.AddTransient<HeroesService>();
             services.AddControllers();
         }
 

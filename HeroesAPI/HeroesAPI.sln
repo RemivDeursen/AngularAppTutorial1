@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeroesAPI", "HeroesAPI\HeroesAPI.csproj", "{1E6880D7-094E-4B52-B7EC-49C7AF3529AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Heroes.API", "HeroesAPI\Heroes.API.csproj", "{1E6880D7-094E-4B52-B7EC-49C7AF3529AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heroes.Data", "Heroes.Data\Heroes.Data.csproj", "{53073856-8420-40F2-BA77-A1465039EEF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heroes.Services", "Hero.Services\Heroes.Services.csproj", "{FF7BE2D9-4A76-4B95-BB97-937A5AB995CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{1E6880D7-094E-4B52-B7EC-49C7AF3529AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E6880D7-094E-4B52-B7EC-49C7AF3529AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E6880D7-094E-4B52-B7EC-49C7AF3529AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53073856-8420-40F2-BA77-A1465039EEF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53073856-8420-40F2-BA77-A1465039EEF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53073856-8420-40F2-BA77-A1465039EEF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53073856-8420-40F2-BA77-A1465039EEF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF7BE2D9-4A76-4B95-BB97-937A5AB995CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF7BE2D9-4A76-4B95-BB97-937A5AB995CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF7BE2D9-4A76-4B95-BB97-937A5AB995CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF7BE2D9-4A76-4B95-BB97-937A5AB995CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

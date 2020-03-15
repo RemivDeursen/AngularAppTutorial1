@@ -4,11 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace HeroesAPI.Models
+namespace Heroes.Data.Models
 {
-    public class HeroContext : DbContext
+    public class ProjectContext : DbContext
     {
-        public HeroContext(DbContextOptions<HeroContext> options) : base(options)
+        public ProjectContext(DbContextOptions<ProjectContext> options) : base(options)
         {
         }
 

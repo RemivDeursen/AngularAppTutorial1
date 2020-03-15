@@ -13,7 +13,7 @@ export class HeroService {
 
   constructor(private messageService: MessageService,
     private http: HttpClient) { }
-  private heroesUrl = 'https://localhost:5001/api/heroes';
+  private heroesUrl = '/api/heroes';
 
   httpOptions = {
     headers: new HttpHeaders({

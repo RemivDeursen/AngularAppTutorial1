@@ -3,14 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HeroesAPI.Models
+namespace Heroes.Services
 {
-    public class Hero
+    public class HeroResponseModel
     {
-        public long Id { get; set; }
         public string Name { get; set; }
-        public string Secret { get; set; }
-
-
     }
 }
