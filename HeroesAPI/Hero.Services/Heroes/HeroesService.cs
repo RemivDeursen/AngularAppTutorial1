@@ -16,13 +16,14 @@ namespace Heroes.Services
             _context = context;
         }
 
-        public async Task<IList<HeroResponseModel>> GetHeroes()
+        public async Task<IList<HeroResponseModel>> GetItems()
         {
-            return await _context.Heroes
+            var Items = await _context.Heroes
                 .Select(x => new HeroResponseModel
                 {
                     Name = x.Name
                 }).ToListAsync();
+            return Items;
         }
 
         public async Task<HeroResponseModel> GetHero(long id)
@@ -68,14 +69,14 @@ namespace Heroes.Services
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!HeroExists(id))
+                /*if (!HeroExists(id))
                 {
                     //return NotFound();
                 }
                 else
                 {
                     throw;
-                }
+                }*/
             }
             return new HeroResponseModel
             {

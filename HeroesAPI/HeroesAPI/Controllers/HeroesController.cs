@@ -20,17 +20,17 @@ namespace Heroes.API.Controllers
             _heroesService = heroesService;
         }
 
-        // GET: api/Heroes
-        [HttpGet("list")]
-        public async Task<IActionResult> GetHeroes()
+        // GET: api/Items
+        [HttpGet]
+        public async Task<IActionResult> GetItems()
         {
-            var allHeroes = await _heroesService.GetHeroes();
-            return Ok(allHeroes);
+            var allItems = await _heroesService.GetItems();
+            return Ok(allItems);
         }
 
         // GET: api/Heroes/5
         [HttpGet("{id}")]
-        public async Task<ActionResult> GetHero(long id)
+        public async Task<IActionResult> GetHero(long id)
         {
             var hero = await _heroesService.GetHero(id);
 
@@ -65,7 +65,7 @@ namespace Heroes.API.Controllers
 
         // DELETE: api/Heroes/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult> DeleteHero(long id)
+        public async Task<IActionResult> DeleteHero(long id)
         {
             var heroRemove = await _heroesService.DeleteHero(id);
 
