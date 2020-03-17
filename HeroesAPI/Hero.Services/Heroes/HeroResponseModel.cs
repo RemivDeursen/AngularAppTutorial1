@@ -8,5 +8,6 @@ namespace Heroes.Services
     public class HeroResponseModel
     {
         public string Name { get; set; }
+        public long Id { get; set; }
     }
 }

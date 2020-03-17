@@ -31,12 +31,7 @@ export class HeroService {
       );
     // return of(HEROES);
   }
-  /** GET hero by id. Will 404 if id not found
-   * There are three significant differences from getHeroes():
-   * getHero() constructs a request URL with the desired hero's id.
-   * The server should respond with a single hero rather than an array of heroes.
-   * getHero() returns an Observable<Hero> ("an observable of Hero objects") rather than an observable of hero arrays .
-   */
+
   getHero(id: number): Observable<Hero> {
     const url = `${this.heroesUrl}/${id}`;
     return this.http.get<Hero>(url)
@@ -64,6 +59,8 @@ export class HeroService {
   deleteHero(hero: Hero | number): Observable<Hero> {
     const id = typeof hero === 'number' ? hero : hero.id;
     const url = `${this.heroesUrl}/${id}`;
+    console.log(id);
+    console.log(url);
 
     return this.http.delete<Hero>(url, this.httpOptions).pipe(
       tap(_ => this.log(`deleted hero id=${id}`)),

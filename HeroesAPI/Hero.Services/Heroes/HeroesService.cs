@@ -21,6 +21,7 @@ namespace Heroes.Services
             var Items = await _context.Heroes
                 .Select(x => new HeroResponseModel
                 {
+                    Id = x.Id,
                     Name = x.Name
                 }).ToListAsync();
             return Items;

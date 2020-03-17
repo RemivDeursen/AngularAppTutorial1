@@ -1,4 +1,3 @@
-import { MessageService } from './../message.service';
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
 import { Component, OnInit } from '@angular/core';
@@ -20,6 +19,7 @@ export class HeroesComponent implements OnInit {
   getHeroes(): void {
     this.heroService.getHeroes()
     .subscribe(heroes => this.heroes = heroes);
+    console.log(this.heroes);
   }
   add(name: string): void {
     name = name.trim();
